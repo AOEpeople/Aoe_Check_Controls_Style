@@ -1,6 +1,6 @@
 {
   "name": "aoe-check-controls-style",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/AOEpeople/Aoe_Check_Controls_Style",
   "description": "Radio/checkbox form controls decorator",
   "ignore": [

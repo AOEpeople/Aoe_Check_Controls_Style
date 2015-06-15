@@ -9,8 +9,8 @@ $sel_checked_fallback:                  '&.checked .ctx-control' !default;
     $sel_checked: $sel_checked + ', ' + $sel_checked_fallback;
 }
 
-$control_margin_right:                  8px;
-$control_offset_top:                    3px;
+$control_margin_right:                  8px !default;
+$control_offset_top:                    0 !default;
 $control_size:                          20px !default;
 $control_label_line_height:             $control_size !default;
 $control_border_color:                  #616370 !default;
@@ -36,4 +36,4 @@ $radio_dot_rel_size:                    0.6 !default;
 $control_checkbox_icon_font_family:     'Fonticons' !default;
 $control_checkbox_icon_key:             '\f101' !default;
 
-$control_text_flow_around: false !default;
+$control_text_flow_around:              false !default;
