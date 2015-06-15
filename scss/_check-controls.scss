@@ -1,0 +1,119 @@
+#{$sel_checkbox_holder},
+#{$sel_radio_holder} {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    line-height: $control_label_line_height;
+    font-weight: normal;
+
+    @if ($control_text_flow_around == false) {
+        padding: 0 0 0 $control_size + $control_margin_right;
+    }
+
+    input {
+        opacity: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: middle;
+        z-index: 1;
+        width: $control_size;
+        height: $control_size;
+        cursor: pointer;
+
+        @if ($control_text_flow_around == false) {
+            position: absolute;
+            left: 0;
+            top: $control_offset_top;
+        } @else {
+            position: relative;
+            margin: 0 $control_margin_right 0 0;
+        }
+    }
+
+    .ctx-control {
+        position: absolute;
+        left: 0;
+        top: $control_offset_top;
+        display: block;
+        cursor: pointer;
+        width: $control_size;
+        height: $control_size;
+    }
+
+    label {
+        display: inline;
+    }
+
+    &,
+    label {
+        cursor: pointer;
+    }
+}
+
+#{$sel_checkbox_holder} {
+    .ctx-control {
+        background: $control_checkbox_bg_color;
+        color: $control_checkbox_icon_color;
+        border: $control_border_size solid $control_border_color;
+        border-radius: $control_checkbox_border_radius;
+
+        &:before {
+            @include check-control-icon();
+            position: relative;
+            top: $control_checkbox_icon_offset_y;
+            right: $control_checkbox_icon_offset_x;
+            font-size: $control_checkbox_icon_font_size;
+        }
+    }
+}
+
+#{$sel_radio_holder} {
+    .ctx-control {
+        background: $control_radio_bg_color;
+        border-radius: 50%;
+        border: $control_border_size solid $control_border_color;
+
+        &:before {
+            display: block;
+            background: $control_radio_dot_color;
+            width: $control_size * $radio_dot_rel_size;
+            height: $control_size * $radio_dot_rel_size;
+            position: relative;
+            top: 50%;
+            margin: $control_size * $radio_dot_rel_size / -2 auto 0;
+            border-radius: 50%;
+        }
+    }
+}
+
+#{$sel_radio_holder} {
+    #{$sel_checked} {
+        @if ($control_radio_checked_border_color != $control_border_color) {
+            border-color: $control_radio_checked_border_color;
+        }
+
+        @if ($control_radio_checked_bg_color != $control_radio_bg_color) {
+            background: $control_radio_checked_bg_color;
+        }
+
+        &:before {
+            content: '';
+        }
+    }
+}
+
+#{$sel_checkbox_holder} {
+    #{$sel_checked} {
+        @if ($control_checkbox_checked_border_color != $control_border_color) {
+            border-color: $control_checkbox_checked_border_color;
+        }
+
+        @if ($control_checkbox_checked_bg_color != $control_checkbox_bg_color) {
+            background: $control_checkbox_checked_bg_color;
+        }
+
+        &:before {
+            content: $control_checkbox_icon_key;
+        }
+    }
+}

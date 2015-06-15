@@ -1,0 +1,24 @@
+{
+  "sub": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "expr": true,
+  "latedef": true,
+  "onevar": false,
+  "newcap": true,
+  "noarg": true,
+  "trailing": true,
+  "undef": true,
+  "unused": false,
+  "indent": 4,
+  "quotmark": true,
+  "browser": true,
+  "jquery": true,
+  "prototypejs": true,
+  "devel": true,
+  "globals": {
+    "Modernizr": true
+  }
+}

@@ -1,0 +1,39 @@
+$include_checked_fallback_sel:          false !default;
+
+$sel_checked:                           'input:checked + .ctx-control' !default;
+$sel_checkbox_holder:                   '.custom-checkbox' !default;
+$sel_radio_holder:                      '.custom-radio' !default;
+$sel_checked_fallback:                  '&.checked .ctx-control' !default;
+
+@if $include_checked_fallback_sel {
+    $sel_checked: $sel_checked + ', ' + $sel_checked_fallback;
+}
+
+$control_margin_right:                  8px;
+$control_offset_top:                    3px;
+$control_size:                          20px !default;
+$control_label_line_height:             $control_size !default;
+$control_border_color:                  #616370 !default;
+$control_checkbox_checked_border_color: $control_border_color !default;
+$control_radio_checked_border_color:    $control_border_color !default;
+$control_border_size:                   1px !default;
+
+$control_radio_dot_color:               #616370 !default;
+$control_checkbox_icon_color:           $control_radio_dot_color !default;
+
+$control_checkbox_bg_color:             transparent !default;
+$control_checkbox_checked_bg_color:     $control_checkbox_bg_color !default;
+$control_radio_bg_color:                $control_checkbox_bg_color !default;
+$control_radio_checked_bg_color:        $control_checkbox_bg_color !default;
+
+$control_checkbox_icon_font_size:       9px !default;
+$control_checkbox_icon_offset_y:        -3px !default;
+$control_checkbox_icon_offset_x:        -2px !default;
+$control_checkbox_border_radius:        2px !default;
+
+$radio_dot_rel_size:                    0.6 !default;
+
+$control_checkbox_icon_font_family:     'Fonticons' !default;
+$control_checkbox_icon_key:             '\f101' !default;
+
+$control_text_flow_around: false !default;
